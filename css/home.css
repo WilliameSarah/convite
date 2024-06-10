@@ -1,0 +1,447 @@
+
+.js .home{
+    opacity: 1; /* mudar para 0 caso queira entrar com musica */
+    
+}
+
+.home.ativo{
+    opacity: 1;
+    transform: none;
+    transition: transform 0.8s, opacity 1.5s;
+    
+}
+.home {
+    background-image: url("../img/fundo.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: calc(5vh);
+    overflow-x: hidden;
+    
+    
+  
+    
+    
+}
+
+
+.home::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 178px;
+    top: 0;
+    left: 0;
+    background-image: url("../img/flores.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    animation:  aparecer 2s ease-in-out forwards;
+
+
+
+
+}
+
+@keyframes aparecer {
+    0% {
+        top: -200px;
+        opacity: 0;
+    }
+    100% {
+        top: 0px; /* A posição final da imagem na tela */
+        opacity: 1;
+    }
+}
+
+@keyframes aparecer-esq {
+    0% {
+        right: -200px;
+        opacity: 0;
+     
+    }
+    100% {
+        right: 0px; /* A posição final da imagem na tela */
+        opacity: 1;
+       
+    }
+}
+
+.home::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 178px;
+    bottom: 0;
+    right: 0;
+    transform: scaleX(-1) scaleY(-1);
+    background-image: url("../img/flores.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    animation:  aparecer-esq 2s ease-in-out forwards;
+    
+   
+}
+
+@media(max-width:900px) {
+    .home::before,.home::after {
+       width: 100%;
+       height: 108px;
+       background-image: url("../img/flores-mini.png");
+       
+    }
+
+    .home::before{
+        width: 100%;
+        height: 108px;
+        background-image: url("../img/flores-mini.png");
+        
+     }
+  }
+
+  @media(max-width:410px) {
+    .home::before{
+ display: none;
+        
+     }
+  }
+.data {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    align-self: center;
+    color: white;  
+    position: relative;
+    display: flex;
+    
+    
+}
+
+
+.data::after, .data::before{
+content: "";
+width:195px;
+height: 1px;
+top: 15px;
+background-color: #E7DA7A;
+position: absolute;
+}
+
+.data::after{
+  right:  150px;
+}
+.data::before{
+    left:  150px;
+  }
+
+
+  .container_nomes{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-wrap: wrap;
+    position: relative;
+
+
+  }
+
+
+
+
+
+  .nomes {
+padding-top: 10px;
+    color: white;
+    text-align: center;
+    
+
+   
+}
+
+.e{
+
+    line-height: 0.7 !important;
+    font-size: 4rem;
+}
+
+.container_nomes::after{
+    content: "";
+    width:100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #E7DA7A;
+    position: absolute;
+}
+
+@media (max-width: 970px) {
+    .container_nomes::after {
+        display: none;
+    }
+}
+
+
+
+
+
+
+@media(max-width:970px) {
+    .data::after,  .data::before{
+        width:40px;
+      }
+  }
+
+  @media(max-width:400px) {
+    .data::after,  .data::before{
+      display: none;
+      }
+  }
+    
+
+.frase {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+@media(max-width:555px) {
+    .nomes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+   
+    }
+
+    .frase {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 1rem !important;
+    }
+
+    .aspas{
+        width: 20px !important;
+      
+    }
+  }
+
+.aspas{
+    width: 48px;
+}
+
+.aspas:last-child{
+    transform: rotate(180deg);
+    
+}
+
+.abrir{
+    display: flex;
+    justify-content: end; 
+}
+
+.ondas{
+position: relative;
+
+
+}
+
+
+.img-casal-fundo{
+    width: 800px;
+    height: 100%;
+    background-image: url("../img/casal.jpg");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+
+.nomes_button{
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.hora{
+    text-align: center;
+    
+
+}
+
+.hora p:first-child {
+    padding-bottom: 10px;
+    font-size: 1rem;
+    color: #303525 ;
+    
+}
+
+.hora p:last-child {
+    color: white;
+  background-color: #26ABB4;
+}
+
+.links {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #606060;
+}
+
+.flex {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.flex p {
+    padding-top: 10px;
+}
+
+
+
+.contador{
+    width: 405px;
+    height: 372px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/arco.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+    top: -130px;
+    
+
+}
+
+
+.contador-container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: white;
+    padding: 40px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    
+
+
+
+}
+
+
+
+.contador p{
+    margin-top: 10px;
+    color: #3C566D;
+    padding-bottom: 20px;
+    
+   
+}
+
+.container_tempo{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    text-align: center;
+    
+
+  
+}
+
+
+
+.tempo{
+  color: #3C566D;
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+}
+
+
+
+#grandeDia{
+    color: #3C566D;
+    display: none;
+}
+
+#grandeDia.ativo{
+    display: block;
+}
+
+.desativado{
+    display: none;
+}
+
+
+
+@media(max-width:555px) {
+    .contador{
+        height: 312px;
+        background-size: contain;
+        position: relative;
+        z-index: 1;
+        top: -50px;
+
+    }
+
+    .container_tempo{
+        gap: 10px;
+    }
+
+    .contador-container{
+        width: 220px;
+        height:220px;
+    }
+  }
+
+
+
+.slide_casal{
+    padding-top: 50px;
+    width: 100%;
+}
+
+.slide_casal img{
+display: block;
+width: 100%;
+}
+
+@keyframes rotateHorizontal {
+    0% {
+        transform: scaleX(1);
+    }
+
+    100% {
+        transform: scaleX(-1);
+    }
+}
+
+#animated-svg {
+    animation: rotateHorizontal 3s ease-in-out infinite alternate;
+    transform-origin: center;
+}
